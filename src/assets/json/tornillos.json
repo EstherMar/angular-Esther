@@ -1,0 +1,177 @@
+[
+    {
+       "id":"1",
+       "nombre":"Tarta de chocolate",
+       "precio":"5.00",
+       "formato":"unidad",
+       "marca":"Carte D'or"
+    },
+    {
+        "id":"2",
+        "nombre":"Pastel de frutas",
+        "precio":"4.00",
+        "formato":"unidad",
+        "marca":"Nestle"
+     },
+     {
+        "id":"3",
+        "nombre":"Arroz con leche",
+        "precio":"4.50",
+        "formato":"pack",
+        "marca":"Danone"
+     },
+     {
+        "id":"4",
+        "nombre":"Natillas",
+        "precio":"6.00",
+        "formato":"pack",
+        "marca":"Carte D'or"
+     },
+     {
+        "id":"5",
+        "nombre":"Crema de chocolate",
+        "precio":"5.00",
+        "formato":"pack",
+        "marca":"Danone"
+     },
+     {
+        "id":"6",
+        "nombre":"Tarta de queso",
+        "precio":"3.50",
+        "formato":"caja",
+        "marca":"Reina"
+     },
+     {
+        "id":"7",
+        "nombre":"Mousse",
+        "precio":"4.00",
+        "formato":"pack",
+        "marca":"Reina"
+     },
+     {
+        "id":"8",
+        "nombre":"Cuajada",
+        "precio":"2.50",
+        "formato":"pack",
+        "marca":"La lechera"
+     },
+     {
+        "id":"9",
+        "nombre":"Tarta tres chocolates",
+        "precio":"5.00",
+        "formato":"caja",
+        "marca":"Danone"
+     },
+     {
+        "id":"10",
+        "nombre":"Yogurt natural",
+        "precio":"2.50",
+        "formato":"pack",
+        "marca":"Nestle"
+     },
+     {
+        "id":"11",
+        "nombre":"Yogurt frutas del bosque",
+        "precio":"2.00",
+        "formato":"pack",
+        "marca":"Reina"
+     },
+     {
+        "id":"12",
+        "nombre":"Tarta de turron",
+        "precio":"6.00",
+        "formato":"caja",
+        "marca":"La lechera"
+     },
+     {
+        "id":"13",
+        "nombre":"Tartaleta de queso",
+        "precio":"2.00",
+        "formato":"caja",
+        "marca":"Reina"
+     },
+     {
+        "id":"14",
+        "nombre":"Bocaditos de naranja",
+        "precio":"1.50",
+        "formato":"caja",
+        "marca":"Danone"
+     },
+     {
+        "id":"15",
+        "nombre":"Trufas de chocolate",
+        "precio":"4.00",
+        "formato":"caja",
+        "marca":"Nestle"
+     },
+     {
+        "id":"16",
+        "nombre":"Trufas de frambuesa",
+        "precio":"4.50",
+        "formato":"caja",
+        "marca":"Carte D'or"
+     },
+     {
+        "id":"17",
+        "nombre":"Helado de vainilla",
+        "precio":"3.50",
+        "formato":"caja",
+        "marca":"La lechera"
+     },
+     {
+        "id":"18",
+        "nombre":"Brownie",
+        "precio":"3.00",
+        "formato":"caja",
+        "marca":"Reina"
+     },
+     {
+        "id":"19",
+        "nombre":"Bolitas de coco",
+        "precio":"2.50",
+        "formato":"caja",
+        "marca":"Reina"
+     },
+     {
+        "id":"20",
+        "nombre":"Trufas de aguacate",
+        "precio":"3.00",
+        "formato":"caja",
+        "marca":"Nestle"
+     },
+     {
+        "id":"21",
+        "nombre":"Croissants de chocolate",
+        "precio":"3.50",
+        "formato":"caja",
+        "marca":"Carte D'or"
+     },
+     {
+        "id":"22",
+        "nombre":"Rellenitos de crema",
+        "precio":"3.00",
+        "formato":"caja",
+        "marca":"Carte D'or"
+     },
+     {
+        "id":"23",
+        "nombre":"Helado de turron",
+        "precio":"6.00",
+        "formato":"caja",
+        "marca":"Nestle"
+     },
+     {
+        "id":"24",
+        "nombre":"Hojaldres rellenos",
+        "precio":"5.50",
+        "formato":"pack",
+        "marca":"Danone"
+     },
+     {
+        "id":"25",
+        "nombre":"Milhojas",
+        "precio":"5.00",
+        "formato":"caja",
+        "marca":"Carte D'or"
+     }
+ ]

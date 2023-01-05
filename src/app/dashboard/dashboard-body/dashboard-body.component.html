@@ -1,0 +1,18 @@
+<table class="body">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Formato</th>
+        <th scope="col">Marca</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tornillo of Tornillos">
+        <td>{{tornillo.nombre}}</td>
+        <td>{{tornillo.precio}}</td>
+        <td>{{tornillo.formato}}</td>
+        <td>{{tornillo.marca}}</td>
+      </tr>
+    </tbody>
+  </table> 

@@ -1,0 +1,38 @@
+.header {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 5px solid green;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 200px;
+
+        img {
+            height: 60px;
+            width: 60px;
+            margin: 20px;
+        }
+
+        p {
+            font-family: Lucida;
+            font-size: 40px;
+            font-weight: 600;
+        }
+    }
+
+    .login {
+        margin: 20px;
+        
+        .button {
+            background-color: #555555;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
+}

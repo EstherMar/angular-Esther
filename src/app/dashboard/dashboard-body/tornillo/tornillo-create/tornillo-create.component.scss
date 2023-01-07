@@ -1,8 +1,7 @@
 .dialog-template {
-    border-radius: 10px;
     box-sizing: border-box;
     display: grid;
-    grid-template: 'dtemp-header' 60px 'dtemp-body' auto 'dtemp-footer' 50px / 1fr;
+    grid-template: 'dtemp-header' 60px 'dtemp-body' auto 'dtemp-footer' 60px / 1fr;
     background: white;
 
     .dialog-template-header {
@@ -41,10 +40,11 @@
     }
 
     .dialog-template-footer {
-        align-items: stretch;
+        align-items: center;
         display: flex;
         flex-flow: row nowrap;
         grid-area: dtemp-footer;
+        margin: 20px;
         justify-content: space-between;
 
         .cancelButton {

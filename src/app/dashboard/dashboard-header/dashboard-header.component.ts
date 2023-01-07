@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'dashboard-header',
@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class DashboardHeader{
-
   public mercadonaLogo: string;
   public mercadonaName: string;
   public loginButton: string;
@@ -18,5 +17,4 @@ export class DashboardHeader{
     this.mercadonaName = 'Mercadona';
     this.loginButton = 'Iniciar sesión';
   }
-
 }

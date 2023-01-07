@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import listaTornillos from '../../../../../assets/json/tornillos.json';
+import { DashboardBody } from '../../dashboard-body.component';
 import { TornilloService } from '../service/tornillo.service';
 
 @Component({
@@ -15,12 +16,13 @@ export class TornilloCreateComponent implements OnInit{
   public title: string;
   public submitButtonText: string;
   public candelButtonText: string;
+  public totalTornillos!: number;
   public nextId: number = 0;
   public form!: UntypedFormGroup;
 
 public constructor (
   private readonly _fb: UntypedFormBuilder,
-  private servicioTornillos: TornilloService,
+  private tornilloService: TornilloService,
   public router: Router,
   ) {
     this.title = 'Nuevo producto';
@@ -30,7 +32,7 @@ public constructor (
 
   public ngOnInit(): void {
     this.form = this._fb.group({
-      id: [''],
+      id: 0,
       nombre: [''],
       precio: [0],
       formato: [''],
@@ -62,21 +64,18 @@ public constructor (
   }
 
   public saveTornillo(): void {
-    const values = this.form.value;
     console.log(listaTornillos);
 
     var newTornillo = {
-      id: this.form.value.id,
+      id: listaTornillos.length + 1,
       nombre: this.form.value.nombre,
       precio: this.form.value.precio,
       formato: this.form.value.formato,
       marca: this.form.value.marca,
     }
 
-  this.servicioTornillos.agregarTornillo(newTornillo).subscribe();
+  this.tornilloService.agregarTornillo(newTornillo).subscribe();
     console.log('nuevo', newTornillo);
-
-    this.router.navigate([]);
   }
 
   public cancel(): void {

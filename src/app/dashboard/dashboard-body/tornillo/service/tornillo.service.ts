@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable, catchError, retry, throwError } from 'rxjs';
 import { Tornillo } from './tornillo';
 
 @Injectable({ providedIn: 'root'})
 
   export class TornilloService {
-    apiUrl = "assets/json/tornillos.json";
+    apiUrl = "./assets/json/tornillos.json";
     
     public constructor( private http: HttpClient ){}
 
@@ -15,12 +15,14 @@ import { Tornillo } from './tornillo';
         .pipe(retry(1), catchError(this.handleError));
     }
 
-    public agregarTornillo(tornillo: any): Observable<Tornillo[]> {
-        return this.http.post<Tornillo[]>(
-            this.apiUrl, JSON.stringify(tornillo))
+    public agregarTornillo(tornillo: Tornillo): Observable<Tornillo> {
+      const headers = new HttpHeaders().set('Content-Type','application/json');
+      const body = JSON.stringify(tornillo); 
+      return this.http.patch<Tornillo>(
+       this.apiUrl, body,{'headers':  headers});
     }
 
-    public deleteTornillo(id: any) {
+    public deleteTornillo(tornillo: Tornillo) {
         return this.http
           .delete<Tornillo>(this.apiUrl)
           .pipe(retry(1), catchError(this.handleError));

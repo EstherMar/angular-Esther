@@ -1,5 +1,4 @@
-{
-   "tornillos": [
+[
     {
        "id":"1",
        "nombre":"Tarta de chocolate",
@@ -175,5 +174,4 @@
         "formato":"caja",
         "marca":"Carte D'or"
      }
- ]
-}
+   ]

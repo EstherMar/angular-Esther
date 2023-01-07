@@ -1,4 +1,46 @@
-<table class="body">
+<div *ngIf ="showCount">
+  <h1 class="title"> Bienvenido </h1>
+  <div class="body-card">
+    <div class="info-data">
+      <h4>Tornillos</h4>
+      <p>{{totalTornillos}} por revisar</p>
+    </div>
+    <div class="confirm-button">
+      <button 
+          class="button"
+          (click)="viewLogin()"
+          >
+          <img src={{eyeIconButton}}/>
+          Revisar
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf ="showLogin">
+  <h1 class="title"> Introduzca usuario </h1>
+  <div class="body-card">
+    <div class="info-login">
+      <label for="name">Nombre: </label>
+      <input 
+          id="name" 
+          type="text" 
+        >
+    </div>
+    <div class="confirm-button">
+      <button 
+          class="button"
+          (click)="viewList()"
+          >
+          <img src={{eyeIconButton}}/>
+          Entrar
+      </button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!showCount && !showLogin">
+  <table class="body-table">
     <thead class="header-list">
       <tr>
         <th scope="col">Nombre</th>
@@ -17,11 +59,12 @@
         <td>
           <button 
           class="bin-button"
-          (click)="removeTornillo()"
+          (click)="removeTornillo(tornillo)"
           >
           <img src={{binIconButton}}/>
         </button>
         </td>
       </tr>
     </tbody>
-  </table> 
+  </table>
+</div>

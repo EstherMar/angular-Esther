@@ -1,0 +1,55 @@
+<div class="dialog-template">
+
+  <div class="dialog-template-header">
+    <h3>{{ title }}</h3>
+  </div>
+
+  <div class="dialog-template-body">
+    <form class="tornillo-form" [formGroup]="form" >
+      <div class="full-with-form">
+        <label for="name">Name: </label>
+        <input 
+          id="name" 
+          type="text" 
+          formControlName="nombre"
+        >
+      </div>
+      <div>
+        <label for="name">Precio: </label>
+        <input 
+          id="name" 
+          type="number" 
+          formControlName="precio"
+        >
+        <label for="name">Formato: </label>
+        <input 
+          id="name" 
+          type="text" 
+          formControlName="formato"
+        >
+      </div>
+      <div class="full-with-form">
+        <label for="name">Marca: </label>
+        <input 
+          id="name" 
+          type="text" 
+          formControlName="marca"
+        >
+      </div>
+    </form>
+  </div>
+  <div class="dialog-template-footer">
+    <button 
+      class="cancelButton"
+      (click)="cancel()"
+    >
+      {{candelButtonText}}
+    </button>
+    <button 
+      class="acceptButton"
+      (click)="saveTornillo()"
+    >
+      {{submitButtonText}}
+    </button>
+  </div>
+</div>

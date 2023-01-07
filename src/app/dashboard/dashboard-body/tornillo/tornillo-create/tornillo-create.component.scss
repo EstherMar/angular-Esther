@@ -1,0 +1,66 @@
+.dialog-template {
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template: 'dtemp-header' 60px 'dtemp-body' auto 'dtemp-footer' 50px / 1fr;
+    background: white;
+
+    .dialog-template-header {
+        align-items: flex-start;
+        display: flex;
+        flex-flow: column nowrap;
+        grid-area: dtemp-header;
+        padding: 26px 24px 0;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 20px;
+            margin: 0;
+        }
+    }
+
+    .dialog-template-body {
+        border-bottom: solid 1px #d8d8d8;
+        color: gray;
+        font-size: 14px;
+        font-weight: 400;
+        grid-area: dtemp-body;
+        line-height: 19px;
+        padding: 2px 24px 15px;
+
+        .tornillo-form {
+            min-width: 150px;
+            max-width: 500px;
+            width: 100%;
+        
+            .full-with-form {
+                width: 100%;
+            }
+        }
+    }
+
+    .dialog-template-footer {
+        align-items: stretch;
+        display: flex;
+        flex-flow: row nowrap;
+        grid-area: dtemp-footer;
+        justify-content: space-between;
+
+        .cancelButton {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background: grey;
+            color: white;
+        }
+
+        .acceptButton {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background: green;
+            color: white;
+        }
+    }
+}

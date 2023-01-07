@@ -9,12 +9,19 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let tornillo of Tornillos">
+      <tr *ngFor="let tornillo of tornillos">
         <td>{{tornillo.nombre}}</td>
         <td>{{tornillo.precio}}</td>
         <td>{{tornillo.formato}}</td>
         <td>{{tornillo.marca}}</td>
-        <td>icon bin</td>
+        <td>
+          <button 
+          class="bin-button"
+          (click)="removeTornillo()"
+          >
+          <img src={{binIconButton}}/>
+        </button>
+        </td>
       </tr>
     </tbody>
   </table> 

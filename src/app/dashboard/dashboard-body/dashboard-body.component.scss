@@ -22,4 +22,16 @@
         border: 1px solid #ddd;
         padding: 8px;
     }
+
+    .bin-button {
+        border: none;
+        background: transparent;
+        width: 100%;
+        text-align: end;
+    
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
 }

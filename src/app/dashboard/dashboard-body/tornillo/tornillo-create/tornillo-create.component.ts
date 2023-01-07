@@ -1,6 +1,6 @@
 import { INPUT_MODALITY_DETECTOR_DEFAULT_OPTIONS } from '@angular/cdk/a11y';
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { FormGroup, UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import listaTornillos from '../../../../../assets/json/tornillos.json';
 import { DashboardBody } from '../../dashboard-body.component';
@@ -19,6 +19,13 @@ export class TornilloCreateComponent implements OnInit{
   public totalTornillos!: number;
   public nextId: number = 0;
   public form!: UntypedFormGroup;
+
+  public formGroup!: FormGroup;
+  formatos: string[] = [
+    'Caja',
+    'Pack',
+    'Unidad',
+  ];
 
 public constructor (
   private readonly _fb: UntypedFormBuilder,

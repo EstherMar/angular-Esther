@@ -16,10 +16,9 @@ import { Tornillo } from './tornillo';
     }
 
     public agregarTornillo(tornillo: Tornillo): Observable<Tornillo> {
-      const headers = new HttpHeaders().set('Content-Type','application/json');
-      const body = JSON.stringify(tornillo); 
-      return this.http.patch<Tornillo>(
-       this.apiUrl, body,{'headers':  headers});
+      const body = JSON.stringify(tornillo);
+      return this.http.post<Tornillo>(
+       'http://localhost:4200/posts', body);
     }
 
     public deleteTornillo(tornillo: Tornillo) {

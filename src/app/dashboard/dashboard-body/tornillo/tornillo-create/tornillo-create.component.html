@@ -14,6 +14,7 @@
           formControlName="nombre"
         >
       </div>
+
       <div>
         <label for="name">Precio: </label>
         <input 
@@ -21,12 +22,16 @@
           type="number" 
           formControlName="precio"
         >
-        <label for="name">Formato: </label>
-        <input 
-          id="name" 
-          type="text" 
-          formControlName="formato"
-        >
+
+        <mat-form-field class="product-field">
+          <mat-label>Seleciona un valor</mat-label>
+          <mat-select formControlName="formato">
+            <mat-option *ngFor="let formato of formatos" [value]="formato">{{
+              formato
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
       </div>
       <div class="full-with-form">
         <label for="name">Marca: </label>
@@ -40,13 +45,13 @@
   </div>
   <div class="dialog-template-footer">
     <button 
-      class="cancelButton"
+      class="cancel-button"
       (click)="cancel()"
     >
       {{candelButtonText}}
     </button>
     <button 
-      class="acceptButton"
+      class="accept-button"
       (click)="saveTornillo()"
     >
       {{submitButtonText}}

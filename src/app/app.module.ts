@@ -11,7 +11,6 @@ import { TornilloCreateComponent } from './dashboard/dashboard-body/tornillo/tor
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
@@ -33,7 +32,6 @@ import { MatSelectModule } from '@angular/material/select';
         FormsModule,
         ReactiveFormsModule,
         MatDialogModule,
-        MatInputModule,
         MatSelectModule,
     ]
 })

@@ -18,7 +18,7 @@ import { Tornillo } from './tornillo';
     public agregarTornillo(tornillo: Tornillo): Observable<Tornillo> {
       const body = JSON.stringify(tornillo);
       return this.http.post<Tornillo>(
-       'http://localhost:4200/posts', body);
+       'http://localhost:4200/assets/json/tornillos.json/post', body);
     }
 
     public deleteTornillo(tornillo: Tornillo) {

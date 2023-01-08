@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { DashboardHeader } from '../dashboard-header/dashboard-header.component';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { UntypedFormGroup } from '@angular/forms';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Tornillo } from './tornillo/service/tornillo';
 import { TornilloService } from './tornillo/service/tornillo.service';
 
@@ -14,10 +16,14 @@ export class DashboardBody implements OnInit{
   public binIconButton: string;
   public eyeIconButton: string;
   public tornillos: Tornillo[] = [];
+  public dataSource:any;
+  public form!: UntypedFormGroup;
   public totalTornillos!: number;
   public cargando: boolean = false;
   public showCount: boolean = true;
   public showLogin: boolean = false;
+
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
   public constructor(
     private tornilloService: TornilloService,
@@ -52,6 +58,10 @@ export class DashboardBody implements OnInit{
         }, 2000)
       }
     })
+
+    for (let x = 1; x <= 100; x++)
+    this.dataSource = new MatTableDataSource<Tornillo>(this.tornillos);
+    this.dataSource.paginator = this.paginator;
   }
 
   public removeTornillo(tornillo: Tornillo): void {
